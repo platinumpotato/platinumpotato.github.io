@@ -1,0 +1,96 @@
+html{
+    font-family: 'Source Sans Pro', sans-serif;
+}
+nav{
+    width: 100%;
+    position: fixed;
+    top: 0px;
+    background-color: orange;
+    display: flex;
+    justify-content: space-evenly;
+    z-index: 2;
+}
+#logo{
+    height: 40px;
+    width: 83px;
+    margin-top: 3px;
+}
+#logo-a{
+    justify-self: flex-end;
+}
+a{
+    text-decoration: none;
+}
+.nav-links{
+    font-size: 20px;
+    margin: unset;
+    padding: 10px 0;
+    color: black;
+}
+#home-page-img{
+    width: 100%;
+    z-index: -1;
+    position: absolute;
+    top: 30px;
+}
+#title{
+    font-size: 100px;
+    margin: 110px 0 0 0;
+    color: #44CCE5;
+}
+#choose{
+    font-size: 40px;
+    margin: 90px 0 0 0;
+}
+#home-page-content{
+    text-align: center;
+}
+#start-btn{
+    background-color: #5BC0DE;
+    color: white;
+    font-size: 60px;
+    padding: 10px;
+    border-radius: 10px;
+    border: solid 2px #44BAE5;
+}
+#desc{
+    margin: 0 0 50px 0;
+    font-size: 1.2em;
+}
+#skill1{
+    margin: 50px 0;
+    display: flex;
+    justify-content: space-evenly;
+    padding: 0 15%;
+}
+#skill2{
+    display: flex;
+    justify-content: space-evenly;
+    padding: 0 25%;
+}
+.skill-btn{
+    color: white;
+    font-size: 60px;
+    padding: 10px 25px;
+    border-radius: 10px;
+}
+#lop-1{
+    background-color: #44BAE5;
+    border: solid 2px #3498DB;
+}
+#lop-2{
+    background-color: #2ECC71;
+    border: solid 2px #16A085;
+}
+#lop-3{
+    background-color: #F1C40F;
+    border: solid 2px #D4AC0D;
+}
+#lop-4{
+    background-color: #F39C12;
+    border: solid 2px #D68910;
+}
+#lop-5{
+    background-color: #E74C3C;
+    border: solid 2px #CB4335;
+}

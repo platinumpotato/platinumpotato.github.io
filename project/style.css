@@ -19,7 +19,8 @@ nav{
     justify-self: flex-end;
 }
 a{
-    text-decoration: none;
+    text-decoration: unset;
+    color: unset;
 }
 .nav-links{
     font-size: 20px;
@@ -27,23 +28,20 @@ a{
     padding: 10px 0;
     color: black;
 }
-#home-page-img{
-    width: 100%;
-    z-index: -1;
-    position: absolute;
-    top: 30px;
-}
 #title{
     font-size: 100px;
-    margin: 110px 0 0 0;
+    margin: 0;
     color: #44CCE5;
 }
 #choose{
     font-size: 40px;
-    margin: 90px 0 0 0;
 }
 #home-page-content{
     text-align: center;
+    background-image: url(./imgs/students.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    padding: 110px 0;
 }
 #start-btn{
     background-color: #5BC0DE;
@@ -93,4 +91,19 @@ a{
 #lop-5{
     background-color: #E74C3C;
     border: solid 2px #CB4335;
+}
+.footer{
+    background-color: #F5B041 ;
+    padding: 0 20%;
+    display: flex;
+    color: #1f1f1f;
+}
+hr{
+    border: solid 1px #1f1f1f;
+}
+.footer-title{
+    margin-bottom: 5%;
+}
+.footer-2{
+    text-align: center;
 }

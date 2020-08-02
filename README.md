@@ -1,1 +1,1 @@
-# platinumpotato.github.io
+# privet tovarishch

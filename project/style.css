@@ -125,3 +125,13 @@ hr{
 .about-us-title{
     text-align: center;
 }
+input{
+    width: 50px; 
+    height: 100px;
+}
+.answer-container{
+    margin: 0;
+    font-size: 50px;
+    display: flex;
+    justify-content: center;
+}

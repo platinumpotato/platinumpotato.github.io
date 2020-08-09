@@ -126,12 +126,63 @@ hr{
     text-align: center;
 }
 input{
-    width: 50px; 
-    height: 100px;
+    width: 2em; 
+    height: 2em;
 }
-.answer-container{
-    margin: 0;
+.answers{
     font-size: 50px;
     display: flex;
-    justify-content: center;
+    justify-content: space-between;
+    padding-right: 10%;
+    margin-bottom: 50px;
+}
+.answer-container{
+    width: 40%;
+    background-color: #44CCE5;
+    border: 2px solid #3498DB;
+    border-radius: 7px;
+}
+.answer-btn{
+    right: 100px;
+}
+.orange-btn{
+    background-color: orange;
+    font-size: x-large;
+    font-family: 'Source Sans Pro', sans-serif;
+    border-radius: 50px;
+    width: 120px; 
+    height: 70px;
+    position: absolute;
+    top: 40vh;
+}
+.score-btn{
+    left: 30px;
+    display: none;
+}
+.quiz-content{
+    margin: 0 15% 0 15%;
+}
+.question-title{
+    text-align: center;
+    margin: 10px 0 50px 0;
+    padding-top: 20px;
+    font-size: xx-large;
+}
+.quiz-color{
+    background-color: yellow;
+}
+.quiz-top{
+    margin: 0 10px;
+}
+.quiz-top-container{
+    display: flex;
+    justify-content: space-between;
+    margin-top: 50px;
+}
+.kiem-tra{
+    text-align: center;
+    font-size: xx-large;
+    color: #28B463;
+    margin-bottom: 0;
+    padding-bottom: 30px;
 }

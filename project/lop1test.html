@@ -8,6 +8,7 @@
     <link rel="stylesheet" href="style.css">
     <link href="https://fonts.googleapis.com/css2?family=Source+Sans+Pro&display=swap" rel="stylesheet">
     <script src="https://kit.fontawesome.com/17e19e4432.js" crossorigin="anonymous"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
 </head>
 
 <body>
@@ -20,20 +21,37 @@
             <p class="nav-links">Về chúng tôi</p>
         </a>
     </nav>
-    <h2 style="margin-top: 50px; text-align: center;">Toán lớp 1</h2>
-    <section>
-        <div style="width: 80%;">1+1= mấy</div>
-        <div class="answer-container">
-            <input type="radio" id="cau1-A" name="cau1" value="true">
-            <label for="cau1-A">2</label>
-            <input type="radio" id="cau1-B" name="cau1" value="false">
-            <label for="cau1-B">1</label>
-            <input type="radio" id="cau1-C" name="cau1" value="false">
-            <label for="cau1-C">3</label>
-            <input type="radio" id="cau1-D" name="cau1" value="false">
-            <label for="cau1-D">4</label>
-        </div>
-    </section>
+    <div class="quiz-top-container">
+        <h2 class="quiz-top" id="score">Điểm:</h2>
+        <h2 class="quiz-top">Toán lớp 1</h2>
+    </div>
+    
+    <div class="quiz-color">
+        <section class="quiz-content">
+            <div id="cau1" class="question">
+                <div id="question-title" class="question-title">Câu 1) 1+1= mấy?</div>
+                <div class="answers">
+                    <div class="answer-container">
+                        <input type="radio" id="cau-A" name="cauHoi" value="true">
+                        <label id="cau-A-" for="cau-A">2</label></div>
+                    <div class="answer-container">
+                        <input type="radio" id="cau-B" name="cauHoi" value="false">
+                        <label id="cau-B-" for="cau-B">1</label></div>
+                </div>
+                <div class="answers">
+                    <button class="answer-btn orange-btn" id="answerCheck">Trả lời</button>
+                    <div class="answer-container">
+                        <input type="radio" id="cau-C" name="cauHoi" value="false">
+                        <label id="cau-C-" for="cau-C">3</label></div>
+                    <div class="answer-container">
+                        <input type="radio" id="cau-D" name="cauHoi" value="false">
+                        <label id="cau-D-" for="cau-D">4</label></div>
+                </div>
+                <h2 id="kiem-tra" class="kiem-tra"></h2>
+                <button class="score-btn orange-btn" id="scoreTrack">Tính điểm</button>
+            </div>
+        </section>
+    </div>
     <section class="footer">
         <div>
             <h4 class="footer-title">Liên hệ với chúng tôi:</h4>
@@ -60,7 +78,8 @@
         </div>
     </section>
 
-    <script src="main.js"></script>
+    <script src="quiz.js">
+    </script>
 </body>
 
 </html>

@@ -119,7 +119,6 @@ for (let i = 1; i <= numQuestions; i++) {
             score++
         }
     }
-
 }
 // tính điểm
 let trackScore = document.getElementById('scoreTrack')

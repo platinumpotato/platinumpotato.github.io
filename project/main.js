@@ -1,6 +1,26 @@
 let trinhDo = 0
 let dangToan = ''
 
+let file = [
+    {trinhDo: 'L1', dangToan: 'SoHoc'},
+    {trinhDo: 'L1', dangToan: 'HinhHoc'},
+    
+    {trinhDo: 'L2', dangToan: 'SoHoc'},
+    {trinhDo: 'L2', dangToan: 'HinhHoc'},
+
+    {trinhDo: 'L3', dangToan: 'SoHoc'},
+    {trinhDo: 'L3', dangToan: 'HoHoc'},
+    {trinhDo: 'L3', dangToan: 'GiaiToan'},
+
+    {trinhDo: 'L4', dangToan: 'SoHoc'},
+    {trinhDo: 'L4', dangToan: 'HinhHoc'},
+    {trinhDo: 'L4', dangToan: 'GiaiToan'},
+
+    {trinhDo: 'L5', dangToan: 'SoHoc'},
+    {trinhDo: 'L5', dangToan: 'HinhHoc'},
+    {trinhDo: 'L5', dangToan: 'GiaiToan'}
+]
+
 let lop1 = document.getElementById('lop-1')
 let lop2 = document.getElementById('lop-2')
 let lop3 = document.getElementById('lop-3')
@@ -20,7 +40,7 @@ lop3.addEventListener('click', toanLop3)
 lop4.addEventListener('click', toanLop4)
 lop5.addEventListener('click', toanLop5)
 
-function bienMat(){
+function bienMat() {
     lop5.style.display = 'none'
     lop4.style.display = 'none'
     lop3.style.display = 'none'
@@ -30,14 +50,16 @@ function bienMat(){
     soHoc.style.display = 'none'
     hinhHoc.style.display = 'none'
 }
-function cacDangToan1(){
+
+function cacDangToan1() {
     soHoc.style.display = 'inline'
     hinhHoc.style.display = 'inline'
     soHoc.addEventListener('click', soCauSoHoc)
     hinhHoc.addEventListener('click', soCauHinhHoc)
     choose.innerHTML = 'Chọn dạng toán'
 }
-function cacDangToan2(){
+
+function cacDangToan2() {
     giaiToan.style.display = 'inline'
     soHoc.style.display = 'inline'
     hinhHoc.style.display = 'inline'
@@ -46,7 +68,8 @@ function cacDangToan2(){
     hinhHoc.addEventListener('click', soCauHinhHoc)
     choose.innerHTML = 'Chọn dạng toán'
 }
-function chonSoCauHoi(){
+
+function chonSoCauHoi() {
     cau5.style.display = 'inline'
     cau10.style.display = 'inline'
     cau5.addEventListener('click', namCau)
@@ -56,50 +79,64 @@ function chonSoCauHoi(){
 
 function toanLop1() {
     bienMat()
-    trinhDo = 1
+    trinhDo = 'L1'
     cacDangToan1()
 }
+
 function toanLop2() {
     bienMat()
     cacDangToan1()
-    trinhDo = 2
+    trinhDo = 'L2'
 }
+
 function toanLop3() {
     bienMat()
-    trinhDo = 3
+    trinhDo = 'L3'
     cacDangToan2()
 }
+
 function toanLop4() {
     bienMat()
-    trinhDo = 4
+    trinhDo = 'L4'
     cacDangToan2()
 }
+
 function toanLop5() {
     bienMat()
-    trinhDo = 5
+    trinhDo = 'L5'
     cacDangToan2()
 }
+
 function soCauHinhHoc() {
     bienMat()
     dangToan = 'hinh hoc'
     chonSoCauHoi()
 }
+
 function soCauSoHoc() {
     bienMat()
     dangToan = 'so hoc'
     chonSoCauHoi()
 }
+
 function soCauGiaiToan() {
     bienMat()
     dangToan = 'giai toan'
     chonSoCauHoi()
 }
 
-function namCau(){
-    if (trinhDo == 1 && dangToan == 'so hoc'){
-        namCau.href = '5CauSoHocL1.html'
+function namCau() {
+    if (trinhDo == 1 && dangToan == 'so hoc') {
+        cau5.href = '5CauSoHocL1.html'
     }
+    // for (let i = 0; i < file.length; i++){
+    //     if (trinhDo == file[i].trinhDo && dangToan == file[i].dangToan){
+    //         cau5.href = '5Cau' + file[i].dangToan + file[i].trinhDo
+    //         console.log(cau5.href = '5Cau' + file[i].trinhDo + file[i.dangToan])
+    //     }
+    // }
 }
-function muoiCau(){
+
+function muoiCau() {
 
 }

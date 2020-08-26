@@ -180,6 +180,7 @@ input{
     height: 70px;
     position: absolute;
     top: 40vh;
+    outline: none;
 }
 .score-btn{
     left: 30px;

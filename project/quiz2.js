@@ -1,39 +1,39 @@
 let questionData = [{
-    content: '1+1 = bao nhiêu',
-    img: '',
-    dapAnA: '1',
-    valueA: 'false',
-    dapAnB: '3',
-    valueB: 'false',
-    dapAnC: '2',
-    valueC: 'true',
-    dapAnD: '4',
-    valueD: 'false',
-},
-{
-    content: 'Đây là hình gì',
-    img: 'https://vtv1.mediacdn.vn/zoom/550_339/2018/11/13/photo-11-15421149127921523173283.jpg',
-    dapAnA: 'chữ nhật',
-    valueA: 'true',
-    dapAnB: 'đáp án sai',
-    valueB: 'false',
-    dapAnC: 'đáp án sai',
-    valueC: 'false',
-    dapAnD: 'đáp án sai',
-    valueD: 'false',
-},
-{
-    content: 'alo',
-    img: 'https://vtv1.mediacdn.vn/zoom/550_339/2018/11/13/photo-11-15421149127921523173283.jpg',
-    dapAnA: 'chữ nhật',
-    valueA: 'true',
-    dapAnB: 'đáp án sai',
-    valueB: 'false',
-    dapAnC: 'đáp án sai',
-    valueC: 'false',
-    dapAnD: 'đáp án sai',
-    valueD: 'false',
-}
+        content: '1+1 = bao nhiêu',
+        img: '',
+        dapAnA: '1',
+        valueA: 'false',
+        dapAnB: '3',
+        valueB: 'false',
+        dapAnC: '2',
+        valueC: 'true',
+        dapAnD: '4',
+        valueD: 'false',
+    },
+    {
+        content: 'Đây là hình gì',
+        img: 'https://vtv1.mediacdn.vn/zoom/550_339/2018/11/13/photo-11-15421149127921523173283.jpg',
+        dapAnA: 'chữ nhật',
+        valueA: 'true',
+        dapAnB: 'đáp án sai',
+        valueB: 'false',
+        dapAnC: 'đáp án sai',
+        valueC: 'false',
+        dapAnD: 'đáp án sai',
+        valueD: 'false',
+    },
+    {
+        content: 'alo',
+        img: 'https://vtv1.mediacdn.vn/zoom/550_339/2018/11/13/photo-11-15421149127921523173283.jpg',
+        dapAnA: 'chữ nhật',
+        valueA: 'true',
+        dapAnB: 'đáp án sai',
+        valueB: 'false',
+        dapAnC: 'đáp án sai',
+        valueC: 'false',
+        dapAnD: 'đáp án sai',
+        valueD: 'false',
+    }
 ]
 //#region  code cũ
 // khai báo biến các thứ
@@ -142,21 +142,17 @@ function nextQuesstion() {
         document.getElementById('cau-B-').innerHTML = Data.dapAnB
         document.getElementById('cau-C-').innerHTML = Data.dapAnC
         document.getElementById('cau-D-').innerHTML = Data.dapAnD
-
         // Đổi value
         document.getElementById('cau-A').value = Data.valueA
         document.getElementById('cau-B').value = Data.valueB
         document.getElementById('cau-C').value = Data.valueC
         document.getElementById('cau-D').value = Data.valueD
-
-
     }
 }
 
 function check() {
     var tick = document.querySelector('input[name=' + 'cauHoi' + ']:checked')
     var ktraDapAn = document.getElementById('kiem-tra')
-
     // kiểm tra xem nếu mà người dùng tích thì mới chạy
     if (tick) {
         let value = tick.value
@@ -174,7 +170,6 @@ function check() {
         }
         tick.checked = false
     }
-    console.log(numberQuestion)
     // check xem nếu mà hỏi hết câu hỏi rồi thì hiện ra nút tính điểm
     if (numberQuestion == questionData.length) {
         let trackScore = document.getElementById('scoreTrack')
@@ -187,9 +182,9 @@ function swapFunction() {
     var tick = document.querySelector('input[name=' + 'cauHoi' + ']:checked')
     let answerCheck = document.getElementById('answerCheck')
     if (answerCheck.textContent == "Trả lời") {
-        if (tick){
-                    check()
-        answerCheck.innerHTML = "Câu Tiếp"
+        if (tick) {
+            check()
+            answerCheck.innerHTML = "Câu Tiếp"
         }
     } else if (answerCheck.textContent == "Câu Tiếp") {
         document.getElementById('kiem-tra').innerHTML = ''
@@ -200,6 +195,7 @@ function swapFunction() {
         document.getElementById('answerCheck').style.display = 'none'
     }
 }
+
 function tinhDiem() {
     alert('Tổng điểm của bạn: ' + score)
 }

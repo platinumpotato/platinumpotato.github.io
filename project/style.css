@@ -73,6 +73,7 @@ a{
     font-size: 60px;
     padding: 10px 25px;
     border-radius: 10px;
+    cursor: pointer;
 }
 #lop-1{
     background-color: #44BAE5;
@@ -93,6 +94,31 @@ a{
 #lop-5{
     background-color: #E74C3C;
     border: solid 2px #CB4335;
+}
+#giai-toan-btn{
+    background-color: #F1C40F;
+    border: solid 2px #D4AC0D;
+    display: none;
+}
+#so-hoc-btn{
+    background-color: #44BAE5;
+    border: solid 2px #3498DB;
+    display: none;
+}
+#hinh-hoc-btn{
+    background-color: #2ECC71;
+    border: solid 2px #16A085;
+    display: none;
+}
+#cau5-btn{
+    background-color: #44BAE5;
+    border: solid 2px #3498DB;
+    display: none;
+}
+#cau10-btn{
+    background-color: #2ECC71;
+    border: solid 2px #16A085;
+    display: none;
 }
 .footer{
     background-color: #F5B041 ;
@@ -164,15 +190,20 @@ input{
 }
 .question-title{
     text-align: center;
-    margin: 10px 0 50px 0;
+    margin: 10px 0 0 0;
     padding-top: 20px;
     font-size: xx-large;
 }
+.question-title1{
+    text-align: center;
+    margin: 10px 0 20px 0;
+    font-size: xx-large;
+}
 .quiz-color{
-    background-color: yellow;
+    background-image: radial-gradient(#F7DC6F, #FAD7A0);
 }
 .quiz-top{
-    margin: 0 10px;
+    margin: 0 20px;
 }
 .quiz-top-container{
     display: flex;
@@ -185,4 +216,8 @@ input{
     color: #28B463;
     margin-bottom: 0;
     padding-bottom: 30px;
+}
+#question-img{
+    height: 30%; 
+    width: 30%;
 }

@@ -1,24 +1,62 @@
 let trinhDo = 0
 let dangToan = ''
 
-let file = [
-    {trinhDo: 'L1', dangToan: 'SoHoc'},
-    {trinhDo: 'L1', dangToan: 'HinhHoc'},
-    
-    {trinhDo: 'L2', dangToan: 'SoHoc'},
-    {trinhDo: 'L2', dangToan: 'HinhHoc'},
+let file = [{
+        trinhDo: 'L1',
+        dangToan: 'SoHoc'
+    },
+    {
+        trinhDo: 'L1',
+        dangToan: 'HinhHoc'
+    },
 
-    {trinhDo: 'L3', dangToan: 'SoHoc'},
-    {trinhDo: 'L3', dangToan: 'HoHoc'},
-    {trinhDo: 'L3', dangToan: 'GiaiToan'},
+    {
+        trinhDo: 'L2',
+        dangToan: 'SoHoc'
+    },
+    {
+        trinhDo: 'L2',
+        dangToan: 'HinhHoc'
+    },
 
-    {trinhDo: 'L4', dangToan: 'SoHoc'},
-    {trinhDo: 'L4', dangToan: 'HinhHoc'},
-    {trinhDo: 'L4', dangToan: 'GiaiToan'},
+    {
+        trinhDo: 'L3',
+        dangToan: 'SoHoc'
+    },
+    {
+        trinhDo: 'L3',
+        dangToan: 'HoHoc'
+    },
+    {
+        trinhDo: 'L3',
+        dangToan: 'GiaiToan'
+    },
 
-    {trinhDo: 'L5', dangToan: 'SoHoc'},
-    {trinhDo: 'L5', dangToan: 'HinhHoc'},
-    {trinhDo: 'L5', dangToan: 'GiaiToan'}
+    {
+        trinhDo: 'L4',
+        dangToan: 'SoHoc'
+    },
+    {
+        trinhDo: 'L4',
+        dangToan: 'HinhHoc'
+    },
+    {
+        trinhDo: 'L4',
+        dangToan: 'GiaiToan'
+    },
+
+    {
+        trinhDo: 'L5',
+        dangToan: 'SoHoc'
+    },
+    {
+        trinhDo: 'L5',
+        dangToan: 'HinhHoc'
+    },
+    {
+        trinhDo: 'L5',
+        dangToan: 'GiaiToan'
+    }
 ]
 
 let lop1 = document.getElementById('lop-1')
@@ -34,11 +72,11 @@ let cau5 = document.getElementById('cau5-btn')
 let cau10 = document.getElementById('cau10-btn')
 let choose = document.getElementById('choose')
 
-lop1.addEventListener('click', toanLop1)
-lop2.addEventListener('click', toanLop2)
-lop3.addEventListener('click', toanLop3)
-lop4.addEventListener('click', toanLop4)
-lop5.addEventListener('click', toanLop5)
+lop1.addEventListener('click', toanLop, 1)
+lop2.addEventListener('click', toanLop, 2)
+lop3.addEventListener('click', toanLop2, 3)
+lop4.addEventListener('click', toanLop2, 4)
+lop5.addEventListener('click', toanLop2, 5)
 
 function bienMat() {
     lop5.style.display = 'none'
@@ -54,8 +92,8 @@ function bienMat() {
 function cacDangToan1() {
     soHoc.style.display = 'inline'
     hinhHoc.style.display = 'inline'
-    soHoc.addEventListener('click', soCauSoHoc)
-    hinhHoc.addEventListener('click', soCauHinhHoc)
+    soHoc.addEventListener('click', dangBai, 'so hoc')
+    hinhHoc.addEventListener('click', dangBai, 'hinh hoc')
     choose.innerHTML = 'Chọn dạng toán'
 }
 
@@ -77,39 +115,21 @@ function chonSoCauHoi() {
     choose.innerHTML = 'Chọn số câu hỏi'
 }
 
-function toanLop1() {
+function toanLop(grade) {
     bienMat()
-    trinhDo = 'L1'
+    trinhDo = 'L' + grade;
     cacDangToan1()
 }
 
-function toanLop2() {
+function toanLop2(grade) {
     bienMat()
-    cacDangToan1()
-    trinhDo = 'L2'
-}
-
-function toanLop3() {
-    bienMat()
-    trinhDo = 'L3'
+    trinhDo = 'L' + grade;
     cacDangToan2()
 }
 
-function toanLop4() {
+function dangBai(questionType) {
     bienMat()
-    trinhDo = 'L4'
-    cacDangToan2()
-}
-
-function toanLop5() {
-    bienMat()
-    trinhDo = 'L5'
-    cacDangToan2()
-}
-
-function soCauHinhHoc() {
-    bienMat()
-    dangToan = 'hinh hoc'
+    dangToan = questionType
     chonSoCauHoi()
 }
 
@@ -126,17 +146,53 @@ function soCauGiaiToan() {
 }
 
 function namCau() {
-    if (trinhDo == 1 && dangToan == 'so hoc') {
-        cau5.href = '5CauSoHocL1.html'
-    }
-    // for (let i = 0; i < file.length; i++){
-    //     if (trinhDo == file[i].trinhDo && dangToan == file[i].dangToan){
-    //         cau5.href = '5Cau' + file[i].dangToan + file[i].trinhDo
-    //         console.log(cau5.href = '5Cau' + file[i].trinhDo + file[i.dangToan])
-    //     }
+    // if (trinhDo == 'L1' && dangToan == 'so hoc') {
+    //     cau5.href = '5CauSoHocL1.html'
     // }
+    // if (trinhDo == 'L1' && dangToan == 'so hoc') {
+    //     cau5.href = '5CauHinhHocL1.html'
+    // }
+    // if (trinhDo == 'L2' && dangToan == 'so hoc') {
+    //     cau5.href = '5CauSoHocL2.html'
+    // }
+    // if (trinhDo == 'L2' && dangToan == 'so hoc') {
+    //     cau5.href = '5CauSoHocL2.html'
+    // }
+    // if (trinhDo == 'L3' && dangToan == 'so hoc') {
+    //     cau5.href = '5CauSoHocL3.html'
+    // }
+    // if (trinhDo == 'L3' && dangToan == 'so hoc') {
+    //     cau5.href = '5CauSoHocL3.html'
+    // }
+    // if (trinhDo == 'L3' && dangToan == 'so hoc') {
+    //     cau5.href = '5CauSoHocL1.html'
+    // }
+    // if (trinhDo == 'L4' && dangToan == 'so hoc') {
+    //     cau5.href = '5CauSoHocL1.html'
+    // }
+    // if (trinhDo == 'L4' && dangToan == 'so hoc') {
+    //     cau5.href = '5CauSoHocL1.html'
+    // }
+    // if (trinhDo == 'L4' && dangToan == 'so hoc') {
+    //     cau5.href = '5CauSoHocL1.html'
+    // }
+    // if (trinhDo == 'L5' && dangToan == 'so hoc') {
+    //     cau5.href = '5CauSoHocL1.html'
+    // }
+    // if (trinhDo == 'L5' && dangToan == 'so hoc') {
+    //     cau5.href = '5CauSoHocL1.html'
+    // }
+    // if (trinhDo == 'L5' && dangToan == 'so hoc') {
+    //     cau5.href = '5CauSoHocL1.html'
+    // }
+
+    // #region code lỗi :((
+    //  for (let i = 0; i < file.length; i++) {
+    //     if (trinhDo == file[i].trinhDo && dangToan == file[i].dangToan) {
+    //             cau5.href = '5Cau' + file[i].trinhDo + file[i].dangToan
+    //         }
+    //     }
+    // #endregion
 }
 
-function muoiCau() {
-
-}
+function muoiCau() {}

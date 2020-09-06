@@ -1,4 +1,4 @@
-let questionData = [{
+let data1 = [{
         content: '1+1 = bao nhiêu',
         img: '',
         dapAnA: '1',
@@ -129,9 +129,9 @@ var numberQuestion = 0;
 var score = 0
 let showscore = document.getElementById('score')
 // khi mở trang là chạy hàm next question
-window.onload = nextQuesstion()
+window.onload = nextQuesstion(data1)
 
-function nextQuesstion() {
+function nextQuesstion(questionData) {
     if (numberQuestion < questionData.length) {
         let Data = questionData[numberQuestion]
         // Đổi câu hỏi
@@ -150,7 +150,7 @@ function nextQuesstion() {
     }
 }
 
-function check() {
+function check(questionData) {
     var tick = document.querySelector('input[name=' + 'cauHoi' + ']:checked')
     var ktraDapAn = document.getElementById('kiem-tra')
     // kiểm tra xem nếu mà người dùng tích thì mới chạy
@@ -178,17 +178,18 @@ function check() {
 }
 
 // đổi cái in ra
-function swapFunction() {
+function swapFunction(questionData) {
     var tick = document.querySelector('input[name=' + 'cauHoi' + ']:checked')
     let answerCheck = document.getElementById('answerCheck')
     if (answerCheck.textContent == "Trả lời") {
+
         if (tick) {
-            check()
+            check(questionData)
             answerCheck.innerHTML = "Câu Tiếp"
         }
     } else if (answerCheck.textContent == "Câu Tiếp") {
         document.getElementById('kiem-tra').innerHTML = ''
-        nextQuesstion()
+        nextQuesstion(questionData)
         answerCheck.innerHTML = "Trả lời"
     }
     if (numberQuestion == questionData.length) {
@@ -196,8 +197,6 @@ function swapFunction() {
     }
 }
 
-function tinhDiem() {
-    alert('Tổng điểm của bạn: ' + score)
-}
-document.getElementById('answerCheck').addEventListener('click', swapFunction)
-document.getElementById('scoreTrack').addEventListener('click', tinhDiem)
+let aa = document.getElementById('answerCheck')
+aa.addEventListener('click',swapFunction(data1))
+
